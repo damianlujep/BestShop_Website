@@ -9,8 +9,9 @@
     --color-green: rgba(7, 172, 230, .16);
     --color-black: #000000;
     --color-grey: #A5A5A5;
-    --color-light-grey: #F7F7F7;
-    --color-white: #FFFFFF;
+    --color-light-grey: #f7f7f7;
+    --color-white: #ffffff;
+    --color-white-border-box: #E8E9ED;
     --color-shadow-header: #00000029;
     --color-icon-aqua: #55DFB4;
     --font-open-sans: 'Open Sans', sans-serif;
@@ -215,8 +216,59 @@ header{
 
 .benefits-section{
     margin-top: 122px;
+    padding-top: 105px;
     background-color: var(--color-light-grey);
-    background-position: center center;
+    display: flex;
+    justify-content: center;
 }
 
+.benefits__container{
+    width: 1124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.benefits-element{
+    height: 370px;
+    width: 100%;
+    margin-bottom: 37px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-white-border-box);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.benefit-description{
+    width: 416px;
+}
+
+.benefit-description > h2{
+    font-family: var(--font-raleway);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+    margin: 91px 0 30px 0;
+}
+
+.benefit-description > p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.red-square-background img{
+    width: 386px;
+    height: auto;
+}
+
+.blue-circle-background img{
+    width: 426px;
+    height: auto;
+}
+
+.aqua-square-background img{
+    width: 296px;
+    height: auto;
+}
