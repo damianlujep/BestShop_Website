@@ -11,6 +11,7 @@
     --color-grey: #A5A5A5;
     --color-light-grey: #F7F7F7;
     --color-white: #FFFFFF;
+    --color-shadow-header: #00000029;
     --font-open-sans: 'Open Sans', sans-serif;
     --font-raleway: 'Raleway', sans-serif;
 }
@@ -22,4 +23,60 @@ body{
 .container{
     margin: 0 auto;
     width: 1352px;
+}
+
+header{
+    height: 70px;
+    box-shadow: 0 3px 6px var(--color-shadow-header);
+}
+
+.header__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%
+}
+
+.logo{
+    color: var(--color-primary);
+    font-family: var(--font-raleway);
+    font-size: 32px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.nav-bar{
+    display: flex;
+}
+
+.nav-link{
+    color: var(--color-grey);
+    font-size:11px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 3.28px;
+    font-weight: 700;
+    line-height: 15px;
+    padding: 28px 12px 24px;
+    border-bottom: 4px transparent;
+}
+
+.nav-link:hover{
+    border-bottom-color: var(--color-primary);
+    border-bottom-style: solid;
+    color: var(--color-black);
+    box-shadow: 0 3px 6px var(--color-shadow-header);
+}
+
+.nav-item{
+    padding: 0 42px;
+}
+
+.nav-item:first-child{
+    padding-left: 0;
+}
+
+.nav-item:last-child{
+    padding-right: 0;
 }
