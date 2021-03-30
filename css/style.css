@@ -229,6 +229,12 @@ header{
     align-items: center;
 }
 
+.benefit-double-blocks{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .benefits-element{
     height: 370px;
     width: 100%;
@@ -244,12 +250,20 @@ header{
     flex-direction: row-reverse;
 }
 
+.single-box{
+    width: 623px;
+}
+
 .benefit-description{
     width: 416px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 36px;
+}
+
+.single-box .benefit-description{
+    width: 554px;
 }
 
 .benefit-reverse .benefit-description{
@@ -308,6 +322,7 @@ header{
     right: 0;
     top: 70px;
     transform: rotate(45deg);
+    z-index: 1;
 }
 
 .red-square img{
@@ -319,10 +334,20 @@ header{
 }
 
 .blue-circle-big{
+    width: 426px;
+    margin: 0 0 13px 70px;
+}
+
+.blue-circle-big::before{
+    content: "";
     background-color: var(--color-primary);
     width: 320px;
     height: 320px;
     border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 12px;
+    z-index: 1;
 }
 
 .blue-circle-big img{
@@ -333,7 +358,27 @@ header{
     z-index: 2;
 }
 
+.aqua-square{
+    width: 440px;
+    height: 370px;
+    display: flex;
+}
+
+.aqua-square::before{
+    content: "";
+    background-color: var(--color-icon-aqua);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
 .aqua-square img{
+    margin-top: 98px;
     width: 296px;
     height: auto;
+    position: absolute;
+    left: 62px;
+    z-index: 2;
 }
