@@ -68,7 +68,6 @@ header{
     border-bottom-color: var(--color-primary);
     border-bottom-style: solid;
     color: var(--color-black);
-    box-shadow: 0 3px 6px var(--color-shadow-header);
 }
 
 .nav-item{
@@ -381,4 +380,144 @@ header{
     position: absolute;
     left: 62px;
     z-index: 2;
+}
+
+/*Pricing*/
+.pricing-section{
+    margin: 0 auto;
+    width: 1266px;
+    height: 616px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-title{
+    margin-top: 100px;
+    font-family: var(--font-raleway);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+.prices-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.offer-box{
+    width: 372px;
+    height: 461px;
+    border: 1px solid;
+    border-radius: 18px;
+    position: relative;
+}
+
+.offer-title{
+    margin: 34px 0 69px 0;
+}
+
+.offer-title > h3{
+    font-family: var(--font-raleway);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.offer-title p:first-of-type{
+    margin-top: 14px;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 64px;
+}
+
+.offer-title p:nth-child(3){
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.offer-description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-bottom: calc(71px + 9px);
+}
+
+.offer-description > li{
+    margin-bottom: 20px;
+}
+
+.offer-description > li::before{
+    content: "";
+    margin-right: 10px;
+    width: 11px;
+    height: 11px;
+    background-image: url("../assets/Ckechmark-1.svg");
+    display: inline-block;
+}
+
+.plan-basic{
+    margin-top: 71px;
+    border-color: var(--color-reddish);
+}
+
+.plan-basic .offer-title > p{
+    color: var(--color-reddish);
+}
+
+.plan-basic li:nth-child(4)::before,
+.plan-basic li:last-of-type::before{
+    background-image: url("../assets/Close.svg");
+}
+
+.plan-professional{
+    width: 405px;
+    height: 500px;
+    margin-top: 50px;
+    border-color: var(--color-primary);
+}
+
+.plan-professional .offer-title p:first-of-type{
+    color: var(--color-primary);
+}
+
+.plan-professional li:last-of-type::before{
+    background-image: url("../assets/Close.svg");
+}
+
+.plan-premium{
+    margin-top: 71px;
+    border-color: var(--color-icon-aqua);
+}
+
+.plan-premium .offer-title{
+    margin-bottom: calc(69px - 5px - 14px);
+}
+
+.plan-premium .offer-title p:first-of-type{
+    color: var(--color-icon-aqua);
+}
+
+.offer-link{
+    padding: 16px 57px;
+    border-radius: 23px;
+    text-decoration: none;
+    color: var(--color-white);
+    font-weight: 700;
+
+}
+
+.plan-basic .offer-link{
+    background-color: var(--color-reddish);
+}
+
+.plan-professional .offer-link{
+    background-color: var(--color-primary);
+}
+
+.plan-premium .offer-link{
+    background-color: var(--color-icon-aqua);
 }
