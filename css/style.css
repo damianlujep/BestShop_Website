@@ -10,10 +10,13 @@
     --color-black: #000000;
     --color-grey: #A5A5A5;
     --color-light-grey: #f7f7f7;
+    --color-grey-inputs: #95989A;
+    --color-grey-checkbox: #707070;
     --color-white: #ffffff;
     --color-white-border-box: #E8E9ED;
     --color-shadow-header: #00000029;
     --color-icon-aqua: #55DFB4;
+    --color-border-box-pro-offer: #07ACE629;
     --font-open-sans: 'Open Sans', sans-serif;
     --font-raleway: 'Raleway', sans-serif;
 }
@@ -386,7 +389,7 @@ header{
 .pricing-section{
     margin: 0 auto;
     width: 1266px;
-    height: 616px;
+    height: calc(616px + 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,7 +446,7 @@ header{
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
-    margin-bottom: calc(71px + 9px);
+    margin-bottom: 71px;
 }
 
 .offer-description > li{
@@ -478,6 +481,11 @@ header{
     height: 500px;
     margin-top: 50px;
     border-color: var(--color-primary);
+    box-shadow: 5px 10px 27px var(--color-border-box-pro-offer);
+}
+
+.plan-professional .offer-description{
+    margin-bottom: calc(71px + 16px + 9px);
 }
 
 .plan-professional .offer-title p:first-of-type{
@@ -493,8 +501,9 @@ header{
     border-color: var(--color-icon-aqua);
 }
 
+
 .plan-premium .offer-title{
-    margin-bottom: calc(69px - 5px - 14px);
+    margin-bottom: calc(69px - 5px - 12px);
 }
 
 .plan-premium .offer-title p:first-of-type{
@@ -520,4 +529,143 @@ header{
 
 .plan-premium .offer-link{
     background-color: var(--color-icon-aqua);
+}
+
+/*Contact*/
+.contact-container{
+    margin: 155px auto 0;
+    width: 896px;
+    height: 376px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-container form{
+    width: 440px;
+    height: 372px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-text > h2{
+    font-family: var(--font-raleway);
+    font-size: 49px;
+    line-height: 57px;
+    font-weight: 400;
+}
+
+.contact-text > p{
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.contact-details > a{
+    text-decoration: none;
+    margin-top: 42px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--color-grey);
+    display: flex;
+    align-items: center;
+}
+
+.contact-details > a::before{
+    content: "";
+    margin-right: 10px;
+    width: 27px;
+    height: 27px;
+    display: block;
+}
+
+.contact-details a:first-child::before{
+    background-image: url("../assets/Mail Icon.svg");
+}
+
+.contact-details a:last-child::before{
+    background-image: url("../assets/Phone Icon.svg");
+}
+
+.contact-container form{
+    width: 440px;
+}
+
+.form-label{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 15px;
+    color: var(--color-primary);
+}
+
+input[type="text"],
+input[type="email"]{
+    border: none;
+    border-bottom: 1px solid var(--color-grey-inputs);
+    margin-bottom: 42px;
+    line-height: 40px;
+}
+
+input[type="email"] {
+    margin-bottom: 30px;
+}
+
+.checkbox-form input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-form{
+    cursor: pointer;
+    display: flex;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--color-grey-checkbox);
+}
+
+.checkbox-form span{
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid var(--color-grey-inputs);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox-form input:checked + span{
+    background-image: url("../assets/Checkmark.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.submit-btn{
+    background-color: var(--color-primary);
+    border-radius: 35px;
+    border: none;
+    box-shadow: 5px 10px 14px var(--color-border-box-pro-offer);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    color:  var(--color-white);
+    margin-top: 20px;
+    align-self: flex-end;
+    padding: 19px 92px;
+}
+
+footer{
+    margin-top: 55px;
+    height: 89px;
+    box-shadow: 0 -5px 40px var(--color-shadow-header);
 }
