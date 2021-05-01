@@ -1,0 +1,141 @@
+.pricing-section {
+  margin: 0 auto;
+  width: 1266px;
+  height: calc(616px + 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-title {
+  margin-top: 100px;
+  font-family: $font-raleway;
+  font-weight: 400;
+  line-height: 42px;
+}
+
+.prices-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.offer-box {
+  width: 372px;
+  height: 461px;
+  border: 1px solid;
+  border-radius: 18px;
+  position: relative;
+}
+
+.offer-title {
+  margin: 34px 0 69px 0;
+
+  h3 {
+    font-family: var($font-raleway);
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  p:first-of-type {
+    margin-top: 14px;
+    font-size: 46px;
+    font-weight: 300;
+    line-height: 64px;
+  }
+
+  p:nth-child(3) {
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+  }
+}
+
+.offer-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 71px;
+
+  > li {
+    margin-bottom: 20px;
+
+    &:before {
+      content: "";
+      margin-right: 10px;
+      width: 11px;
+      height: 11px;
+      background-image: url("../assets/Ckechmark-1.svg");
+      display: inline-block;
+    }
+  }
+}
+
+.offer-link {
+  padding: 16px 57px;
+  border-radius: 23px;
+  text-decoration: none;
+  color: $color-white;
+  font-weight: 700;
+}
+
+.plan-basic {
+  margin-top: 71px;
+  border-color: $color-reddish;
+
+  .offer-title > p {
+    color: $color-reddish;
+  }
+
+  li:nth-child(4)::before,
+  li:last-of-type::before {
+    background-image: url("../assets/Close.svg");
+  }
+
+  .offer-link {
+    background-color: $color-reddish;
+  }
+}
+
+.plan-professional {
+  width: 405px;
+  height: 500px;
+  margin-top: 50px;
+  border-color: $color-primary;
+  box-shadow: 5px 10px 27px $color-border-box-pro-offer;
+
+  .offer-description {
+    margin-bottom: calc(71px + 16px + 9px);
+
+    li:last-of-type::before {
+      background-image: url("../assets/Close.svg");
+    }
+  }
+
+  .offer-title p:first-of-type {
+    color: $color-primary;
+  }
+
+  .offer-link {
+    background-color: $color-primary;
+  }
+}
+
+.plan-premium {
+  margin-top: 71px;
+  border-color: $color-icon-aqua;
+
+  .offer-title {
+    margin-bottom: calc(69px - 5px - 12px);
+
+    p:first-of-type {
+      color: $color-icon-aqua;
+    }
+  }
+
+  .offer-link {
+    background-color: $color-icon-aqua;
+  }
+}

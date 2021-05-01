@@ -1,0 +1,55 @@
+.contact-container {
+  margin: 155px auto 0;
+  width: 896px;
+  height: 376px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+
+  > a {
+    margin-top: 42px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color-grey;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      margin-right: 10px;
+      width: 27px;
+      height: 27px;
+      display: block;
+    }
+
+    &:first-child::before {
+      background-image: url("../assets/Mail Icon.svg");
+    }
+
+    &:last-child::before {
+      background-image: url("../assets/Phone Icon.svg");
+    }
+  }
+}
+
+.contact-text {
+  > h2 {
+    font-family: $font-raleway;
+    font-size: 49px;
+    line-height: 57px;
+    font-weight: 400;
+  }
+
+  > p {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+}
+
