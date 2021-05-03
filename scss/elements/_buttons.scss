@@ -11,5 +11,9 @@
 }
 
 .btn-big{
-  padding: 23px 157px;
+  padding: 23px 80px;
+
+  @include media-tablet-size{
+    padding: 23px 157px;
+  }
 }

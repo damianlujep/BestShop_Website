@@ -1,7 +1,7 @@
 .pricing-section {
   margin: 0 auto;
   width: 1266px;
-  height: calc(616px + 100px);
+  //height: calc(616px + 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,9 +16,13 @@
 
 .prices-boxes {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  display: inline-block;
+
+  @include media-tablet-size{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
 }
 
 .offer-box {

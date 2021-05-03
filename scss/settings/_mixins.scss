@@ -1,0 +1,33 @@
+//1201px and more - Extra large screens, TV
+//1025p —  1200px: Desktops, large screens
+$min-width-laptop: 1352px;
+//769px - 1024px: Small screens, laptops
+$min-width-laptop-small: 769px;
+//481px - 768px: iPads, Tablets
+$min-width-tablet: 481px;
+//320px - 480px Mobile devices
+$min-width-mobile: 320px;
+
+@mixin media-mobile-size{
+  @media (min-width: $min-width-mobile) {
+    @content
+  }
+}
+
+@mixin media-tablet-size{
+  @media (min-width: $min-width-tablet) {
+    @content
+  }
+}
+
+@mixin media-laptop-size-small{
+  @media (min-width: $min-width-laptop-small) {
+    @content
+  }
+}
+
+@mixin media-laptop-size{
+  @media (min-width: $min-width-laptop) {
+    @content
+  }
+}

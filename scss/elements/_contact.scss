@@ -1,14 +1,22 @@
 .contact-container {
   margin: 155px auto 0;
   width: 896px;
-  height: 376px;
-  display: flex;
-  justify-content: space-between;
+  //height: 376px;
+  display: inline-block;
+
+  @include media-tablet-size{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .contact-details {
-  display: flex;
-  justify-content: space-between;
+  display: inline-block;
+
+  @include media-tablet-size{
+    display: flex;
+    justify-content: space-between;
+  }
 
   > a {
     margin-top: 42px;
