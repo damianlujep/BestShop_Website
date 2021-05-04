@@ -1,43 +1,77 @@
 .pricing-section {
   margin: 0 auto;
-  width: 1266px;
+  width: 100%;
   //height: calc(616px + 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include media-laptop-size{
+    width: 1266px;
+  }
+
 }
 
 .pricing-title {
-  margin-top: 100px;
+  margin-top: 53px;
   font-family: $font-raleway;
   font-weight: 400;
   line-height: 42px;
+
+  @include media-laptop-size{
+    margin-top: 100px;
+  }
 }
 
 .prices-boxes {
   width: 100%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @include media-tablet-size{
-    display: flex;
+  @include media-laptop-size{
+    flex-direction: row;
     justify-content: space-between;
     text-align: center;
   }
 }
 
 .offer-box {
-  width: 372px;
-  height: 461px;
+  width: 293px;
+  height: 251px;
   border: 1px solid;
   border-radius: 18px;
   position: relative;
+  padding: 25px 11px 51px 45px;
+
+  @include media-laptop-size{
+    width: 372px;
+    height: 461px;
+    padding: 0;
+  }
+}
+
+.offer-summary{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media-laptop-size{
+    flex-direction: column;
+  }
 }
 
 .offer-title {
-  margin: 34px 0 69px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-laptop-size{
+    margin: 34px 0 69px 0;
+  }
 
   h3 {
-    font-family: var($font-raleway);
+    font-family: $font-raleway;
     font-size: 20px;
     font-weight: 700;
   }
@@ -61,7 +95,11 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
-  margin-bottom: 71px;
+
+  @include media-laptop-size{
+    margin-bottom: 71px;
+    margin-top: 25px;
+  }
 
   > li {
     margin-bottom: 20px;
@@ -83,10 +121,16 @@
   text-decoration: none;
   color: $color-white;
   font-weight: 700;
+  position: absolute;
+  left: 67.5px;
 }
 
 .plan-basic {
-  margin-top: 71px;
+  margin-top: 14px;
+
+  @include media-laptop-size{
+    margin-top: 71px;
+  }
   border-color: $color-reddish;
 
   .offer-title > p {
@@ -104,14 +148,24 @@
 }
 
 .plan-professional {
-  width: 405px;
-  height: 500px;
+  width: 339px;
+  height: 277px;
+  padding: 51px 41px 51px 28px;
   margin-top: 50px;
   border-color: $color-primary;
   box-shadow: 5px 10px 27px $color-border-box-pro-offer;
 
+  @include media-laptop-size{
+    width: 405px;
+    height: 500px;
+    padding: 0;
+  }
+
   .offer-description {
-    margin-bottom: calc(71px + 16px + 9px);
+
+    @include media-laptop-size{
+      margin-bottom: calc(71px + 16px + 9px);
+    }
 
     li:last-of-type::before {
       background-image: url("../assets/Close.svg");
@@ -124,11 +178,13 @@
 
   .offer-link {
     background-color: $color-primary;
+    left: 90.5px;
   }
 }
 
 .plan-premium {
   margin-top: 71px;
+  padding: 25px 16px 51px 31px;
   border-color: $color-icon-aqua;
 
   .offer-title {
