@@ -1206,10 +1206,15 @@ header {
 }
 
 .contact-container form {
-  width: 440px;
-  height: 372px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1352px) {
+  .contact-container form {
+    width: 440px;
+    height: 372px;
+  }
 }
 
 .form-label {
@@ -1277,10 +1282,15 @@ input[type=email] {
 }
 
 footer {
-  margin-top: 55px;
+  margin-top: 44px;
   height: 89px;
   box-shadow: 0 -5px 40px #00000029;
   display: flex;
+}
+@media (min-width: 1352px) {
+  footer {
+    margin-top: 59px;
+  }
 }
 
 .footer-container {
