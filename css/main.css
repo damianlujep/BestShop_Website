@@ -1026,7 +1026,6 @@ header {
 }
 @media (min-width: 1352px) {
   .offer-description {
-    margin-bottom: 71px;
     margin-top: 25px;
   }
 }
@@ -1050,6 +1049,12 @@ header {
   font-weight: 700;
   position: absolute;
   left: 67.5px;
+  bottom: -24px;
+}
+@media (min-width: 1352px) {
+  .offer-link {
+    left: 106px;
+  }
 }
 
 .plan-basic {
@@ -1102,11 +1107,21 @@ header {
   background-color: #08A6E4;
   left: 90.5px;
 }
+@media (min-width: 1352px) {
+  .plan-professional .offer-link {
+    left: 123.5px;
+  }
+}
 
 .plan-premium {
   margin-top: 71px;
   padding: 25px 16px 51px 31px;
   border-color: #55DFB4;
+}
+@media (min-width: 1352px) {
+  .plan-premium {
+    padding: 0;
+  }
 }
 .plan-premium .offer-title {
   margin-bottom: calc(69px - 5px - 12px);
@@ -1119,13 +1134,16 @@ header {
 }
 
 .contact-container {
-  margin: 155px auto 0;
-  width: 896px;
-  display: inline-block;
+  margin-top: 69px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   .contact-container {
-    display: flex;
+    width: 896px;
+    margin-top: 139px;
+    flex-direction: row;
     justify-content: space-between;
   }
 }
@@ -1133,7 +1151,7 @@ header {
 .contact-details {
   display: inline-block;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   .contact-details {
     display: flex;
     justify-content: space-between;
@@ -1162,10 +1180,13 @@ header {
   background-image: url("../assets/Phone Icon.svg");
 }
 
+.contact-text {
+  margin-bottom: 53px;
+}
 .contact-text > h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 49px;
-  line-height: 57px;
+  font-size: 40px;
+  line-height: 47px;
   font-weight: 400;
 }
 .contact-text > p {
@@ -1173,6 +1194,15 @@ header {
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+@media (min-width: 1352px) {
+  .contact-text {
+    margin-bottom: 0;
+  }
+  .contact-text > h2 {
+    font-size: 49px;
+    line-height: 57px;
+  }
 }
 
 .contact-container form {
@@ -1187,7 +1217,7 @@ header {
   font-size: 11px;
   font-weight: 700;
   line-height: 15px;
-  color: var(--color-primary);
+  color: #08A6E4;
 }
 
 input[type=text],

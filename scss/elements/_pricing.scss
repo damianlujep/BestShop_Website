@@ -97,7 +97,7 @@
   line-height: 19px;
 
   @include media-laptop-size{
-    margin-bottom: 71px;
+    //margin-bottom: 71px;
     margin-top: 25px;
   }
 
@@ -123,6 +123,11 @@
   font-weight: 700;
   position: absolute;
   left: 67.5px;
+  bottom: -24px;
+
+  @include media-laptop-size{
+    left: 106px;
+  }
 }
 
 .plan-basic {
@@ -162,7 +167,6 @@
   }
 
   .offer-description {
-
     @include media-laptop-size{
       margin-bottom: calc(71px + 16px + 9px);
     }
@@ -179,6 +183,10 @@
   .offer-link {
     background-color: $color-primary;
     left: 90.5px;
+
+    @include media-laptop-size{
+      left: 123.5px;
+    }
   }
 }
 
@@ -186,6 +194,10 @@
   margin-top: 71px;
   padding: 25px 16px 51px 31px;
   border-color: $color-icon-aqua;
+
+  @include media-laptop-size{
+    padding: 0;
+  }
 
   .offer-title {
     margin-bottom: calc(69px - 5px - 12px);
