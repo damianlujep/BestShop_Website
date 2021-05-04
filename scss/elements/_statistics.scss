@@ -17,7 +17,7 @@
   margin-top: 50px;
   display: inline-block;
 
-  @include media-tablet-size{
+  @include media-laptop-size{
     margin-top: 101px;
     display: flex;
   }
@@ -33,7 +33,7 @@
     margin-bottom: 0;
   }
 
-  @include media-tablet-size{
+  @include media-laptop-size{
     //Original 185px
     margin: 0 calc(230px * 0.5);
   }

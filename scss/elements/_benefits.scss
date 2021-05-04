@@ -18,7 +18,7 @@
   width: 315px;
   display: inline-block;
 
-  @include media-tablet-size {
+  @include media-laptop-size {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,6 +52,16 @@
   flex-direction: column-reverse;
   justify-content: space-between;
 
+  @include media-laptop-size {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &.benefit-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+
   &.benefit-reverse{
     h2{
       margin-bottom: 18px;
@@ -61,27 +71,6 @@
       margin-bottom: 25px;
     }
   }
-
-
-  @include media-laptop-size {
-    flex-direction: row;
-    justify-content: space-between;
-
-    &.benefit-reverse {
-      flex-direction: row-reverse;
-
-      @include media-laptop-size {
-        .benefit-description {
-          margin: 0 36px 0 0;
-
-          p{
-            margin-top: 18px ;
-          }
-        }
-      }
-    }
-  }
-
   &.single-box {
     display: inline-block;
     margin-bottom: 0;
@@ -111,13 +100,6 @@
   justify-content: space-between;
   padding: 0 21px;
 
-  @include media-laptop-size {
-    width: 416px;
-    margin-left: 36px;
-    padding: 0;
-    justify-content: center;
-  }
-
   > h2 {
     font-family: $font-raleway;
     font-weight: 400;
@@ -127,9 +109,18 @@
   > p {
     font-weight: 400;
     margin-bottom: 30px;
+  }
 
-    @include media-tablet-size{
+  @include media-laptop-size {
+    margin: 0 36px 0 0;
+    width: 416px;
+    margin-left: 36px;
+    padding: 0;
+    justify-content: center;
+
+    p{
       margin-bottom: 0;
+      margin-top: 18px ;
     }
   }
 }

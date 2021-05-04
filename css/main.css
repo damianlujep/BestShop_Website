@@ -406,7 +406,7 @@ h2 {
   font-size: 30px;
   line-height: 35px;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   h2 {
     font-size: 36px;
     line-height: 42px;
@@ -417,7 +417,7 @@ p {
   font-size: 14px;
   line-height: 19px;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   p {
     font-size: 16px;
     line-height: 22px;
@@ -581,7 +581,7 @@ header {
   margin-top: 50px;
   display: inline-block;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   .stats-elements {
     margin-top: 101px;
     display: flex;
@@ -597,7 +597,7 @@ header {
 .stats-data:last-child {
   margin-bottom: 0;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   .stats-data {
     margin: 0 calc(230px * 0.5);
   }
@@ -669,7 +669,7 @@ header {
   width: 315px;
   display: inline-block;
 }
-@media (min-width: 481px) {
+@media (min-width: 1352px) {
   .benefits__container {
     display: flex;
     flex-direction: column;
@@ -706,12 +706,6 @@ header {
   flex-direction: column-reverse;
   justify-content: space-between;
 }
-.benefits-element.benefit-reverse h2 {
-  margin-bottom: 18px;
-}
-.benefits-element.benefit-reverse p {
-  margin-bottom: 25px;
-}
 @media (min-width: 1352px) {
   .benefits-element {
     flex-direction: row;
@@ -721,13 +715,11 @@ header {
     flex-direction: row-reverse;
   }
 }
-@media (min-width: 1352px) and (min-width: 1352px) {
-  .benefits-element.benefit-reverse .benefit-description {
-    margin: 0 36px 0 0;
-  }
-  .benefits-element.benefit-reverse .benefit-description p {
-    margin-top: 18px;
-  }
+.benefits-element.benefit-reverse h2 {
+  margin-bottom: 18px;
+}
+.benefits-element.benefit-reverse p {
+  margin-bottom: 25px;
 }
 .benefits-element.single-box {
   display: inline-block;
@@ -756,14 +748,6 @@ header {
   justify-content: space-between;
   padding: 0 21px;
 }
-@media (min-width: 1352px) {
-  .benefit-description {
-    width: 416px;
-    margin-left: 36px;
-    padding: 0;
-    justify-content: center;
-  }
-}
 .benefit-description > h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -773,9 +757,17 @@ header {
   font-weight: 400;
   margin-bottom: 30px;
 }
-@media (min-width: 481px) {
-  .benefit-description > p {
+@media (min-width: 1352px) {
+  .benefit-description {
+    margin: 0 36px 0 0;
+    width: 416px;
+    margin-left: 36px;
+    padding: 0;
+    justify-content: center;
+  }
+  .benefit-description p {
     margin-bottom: 0;
+    margin-top: 18px;
   }
 }
 
