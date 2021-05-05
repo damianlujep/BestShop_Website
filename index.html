@@ -5,16 +5,22 @@
     <title>BestShop</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="scss/generic/_reset.scss">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
         <div class="container header__container">
             <a class="logo" href="index.html">BestShop</a>
             <nav>
+                <input type="checkbox" id="menu_btn">
+                <label for="menu_btn" class="toggle-menu">
+                    <span class="mobile-menu"></span>
+                    <span class="mobile-menu"></span>
+                    <span class="mobile-menu"></span>
+                </label>
                 <ul class="nav-bar">
                     <li class="nav-item">
                         <a class="nav-link" href="#why-us">Why us</a>
@@ -33,7 +39,7 @@
         </div>
     </header>
     <section class="welcome-section">
-        <div class="welcome-text">
+        <div class="container welcome-text">
             <h1>Sell More!</h1>
             <p>Open shop on our platform and increase your sales</p>
             <a href="#" class="btn btn-big-welcome btn-big">Open your shop</a>
@@ -41,7 +47,7 @@
         <img src="assets/Background.png" alt="Background">
     </section>
     <main>
-        <section class="stats-section" id="why-us">
+        <section class="stats-section container" id="why-us">
             <h2>The most popular sales platform in country</h2>
             <div class="stats-elements">
                 <article class="stats-data">
@@ -70,7 +76,7 @@
             </div>
         </section>
         <section class="benefits-section" id="benefits">
-            <div class="benefits__container">
+            <div class="benefits__container container">
                 <article class="benefits-element">
                     <div class="benefit-description">
                         <h2>Be always first</h2>
@@ -83,7 +89,7 @@
                 </article>
                 <article class="benefits-element benefit-reverse">
                     <div class="benefit-description">
-                        <h2>Your shop is where you are!</h2>
+                        <h2>Your shop is<br>where you are!</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         <hr class="horizontal-line blue-border">
                     </div>
@@ -94,7 +100,7 @@
                 <div class="benefit-double-blocks">
                     <article class="benefits-element single-box">
                         <div class="benefit-description">
-                            <h2>Increase recognition your brand!</h2>
+                            <h2>Increase recognition<br>your brand!</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                             <hr class="horizontal-line aqua-border">
                         </div>
@@ -105,57 +111,63 @@
                 </div>
             </div>
         </section>
-        <section class="pricing-section" id="pricing">
+        <section class="container pricing-section" id="pricing">
             <h2 class="pricing-title">Pricing</h2>
             <div class="prices-boxes">
                 <article class="offer-box plan-basic">
-                    <div class="offer-title">
-                        <h3>Basic</h3>
-                        <p>$0</p>
+                    <div class="offer-summary">
+                        <div class="offer-title">
+                            <h3>Basic</h3>
+                            <p>$0</p>
+                        </div>
+                        <ul class="offer-description">
+                            <li>100 MB HDD</li>
+                            <li>1 Subdomain</li>
+                            <li>2 E-mails</li>
+                            <li>Two years license</li>
+                            <li>Full support</li>
+                        </ul>
                     </div>
-                    <ul class="offer-description">
-                        <li>100 MB HDD</li>
-                        <li>1 Subdomain</li>
-                        <li>2 E-mails</li>
-                        <li>Two years license</li>
-                        <li>Full support</li>
-                    </ul>
                     <a href="#" class="btn offer-link">Begin</a>
                 </article>
                 <article class="offer-box plan-professional">
-                    <div class="offer-title">
-                        <h3>Professional</h3>
-                        <p>$25</p>
-                        <p>Limited offer</p>
+                    <div class="offer-summary">
+                        <div class="offer-title">
+                            <h3>Professional</h3>
+                            <p>$25</p>
+                            <p>Limited offer</p>
+                        </div>
+                        <ul class="offer-description">
+                            <li>500 MB HDD</li>
+                            <li>2 Subdomains</li>
+                            <li>5 E-mails</li>
+                            <li>One year license</li>
+                            <li>Full support</li>
+                        </ul>
                     </div>
-                    <ul class="offer-description">
-                        <li>500 MB HDD</li>
-                        <li>2 Subdomains</li>
-                        <li>5 E-mails</li>
-                        <li>One year license</li>
-                        <li>Full support</li>
-                    </ul>
                     <a href="#" class="btn offer-link">Begin</a>
                 </article>
                 <article class="offer-box plan-premium">
-                    <div class="offer-title">
-                        <h3>Premium</h3>
-                        <p>$60</p>
-                        <p>Limited offer</p>
+                    <div class="offer-summary">
+                        <div class="offer-title">
+                            <h3>Premium</h3>
+                            <p>$60</p>
+                            <p>Limited offer</p>
+                        </div>
+                        <ul class="offer-description">
+                            <li>2 GB HDD</li>
+                            <li>5 Subdomains</li>
+                            <li>20 E-mails</li>
+                            <li>Two years license</li>
+                            <li>Full support</li>
+                        </ul>
                     </div>
-                    <ul class="offer-description">
-                        <li>2 GB HDD</li>
-                        <li>5 Subdomains</li>
-                        <li>20 E-mails</li>
-                        <li>Two years license</li>
-                        <li>Full support</li>
-                    </ul>
                     <a href="#" class="btn offer-link">Begin</a>
                 </article>
             </div>
         </section>
     </main>
-    <div class="contact-container">
+    <div class="container contact-container">
         <section class="contact-text" id="contact">
             <h2>Any questions?</h2>
             <p>Leave your email address or call us!</p>
@@ -180,7 +192,7 @@
         </form>
     </div>
     <footer>
-        <div class="container">
+        <div class="container footer-container">
             <section class="company-details">
                 <a href="#" class="logo logo-footer">BestShop</a>
                 <p class="brand-info">© 2019 BestShop LTD, All Rights Reserved</p>

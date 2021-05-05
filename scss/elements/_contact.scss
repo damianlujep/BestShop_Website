@@ -1,0 +1,77 @@
+.contact-container {
+  margin-top: 69px;
+  width: 100%;
+  //height: 376px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-laptop-size{
+    width: 896px;
+    margin-top: 139px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contact-details {
+  display: inline-block;
+
+  @include media-laptop-size{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  > a {
+    margin-top: 42px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    color: $color-grey;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      margin-right: 10px;
+      width: 27px;
+      height: 27px;
+      display: block;
+    }
+
+    &:first-child::before {
+      background-image: url("../assets/Mail Icon.svg");
+    }
+
+    &:last-child::before {
+      background-image: url("../assets/Phone Icon.svg");
+    }
+  }
+}
+
+.contact-text {
+  margin-bottom: 53px;
+
+  > h2 {
+    font-family: $font-raleway;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 400;
+  }
+
+  > p {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  @include media-laptop-size{
+    margin-bottom: 0;
+
+    > h2{
+      font-size: 49px;
+      line-height: 57px;
+    }
+  }
+}
+

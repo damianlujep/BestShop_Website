@@ -1,0 +1,35 @@
+.welcome-section {
+  height: calc(100vh - 70px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  img {
+    margin-top: 15px;
+    object-fit: cover;
+    width: 100%;
+    min-height: 230px;
+  }
+}
+
+.welcome-text {
+  margin-top: 130px;
+  text-align: center;
+
+  h1 {
+    font-family: var(--font-raleway);
+    font-weight: 400;
+    line-height: 57px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    margin-bottom: 60px;
+  }
+}
+
+

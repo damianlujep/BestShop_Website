@@ -1,0 +1,78 @@
+.contact-container form{
+  width: 100%;
+  //height: 372px;
+  display: flex;
+  flex-direction: column;
+
+  @include media-laptop-size{
+    width: 440px;
+    height: 372px;
+  }
+}
+
+.form-label{
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 15px;
+  color: $color-primary;
+}
+
+input[type="text"],
+input[type="email"]{
+  border: none;
+  border-bottom: 1px solid $color-grey-inputs;
+  margin-bottom: 42px;
+  line-height: 40px;
+}
+
+input[type="email"] {
+  margin-bottom: 30px;
+}
+
+.checkbox-form{
+  cursor: pointer;
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: $color-grey-checkbox;
+
+  input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked + span{
+      background-image: url("../assets/Checkmark.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  span{
+    height: 24px;
+    flex-shrink: 0;
+    flex-basis: 24px;
+    border: 1px solid $color-grey-inputs;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
+
+.submit-btn{
+  background-color: $color-primary;
+  border-radius: 35px;
+  border: none;
+  box-shadow: 5px 10px 14px $color-border-box-pro-offer;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-white;
+  margin-top: 20px;
+  align-self: flex-end;
+  padding: 19px 92px;
+}

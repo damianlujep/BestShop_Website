@@ -1,0 +1,49 @@
+footer{
+  margin-top: 44px;
+  height: 89px;
+  box-shadow: 0 -5px 40px $color-shadow-header;
+  display: flex;
+
+  @include media-laptop-size{
+    margin-top: 59px;
+  }
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-footer{
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.brand-info{
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 15px;
+  color: $color-grey;
+  margin-top: 7px;
+}
+
+.social-media{
+  display: flex;
+  align-items: center;
+
+  a{
+    width: 24px;
+    height: 24px;
+    text-decoration: none;
+
+    &:first-child{
+      margin-right: 20px;
+    }
+  }
+}

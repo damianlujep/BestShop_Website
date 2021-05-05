@@ -1,0 +1,151 @@
+header {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 3px 6px $color-shadow-header;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+nav input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+
+  &:checked + .toggle-menu{
+    .mobile-menu{
+      transition: 0.5s;
+
+      &:first-child{
+        transform: rotate(-45deg) translate(-3px, 5px);
+      }
+
+      &:nth-child(2){
+        opacity: 0;
+      }
+
+      &:last-child{
+        transform: rotate(45deg) translate(-2px, -4px);
+      }
+    }
+
+    & + .nav-bar{
+      display: inline-block;
+      font-size: 11px;
+      line-height: 15px;
+      width: 100%;
+      position: absolute;
+      padding-top: 30px;
+      padding-bottom: 34px;
+      box-shadow: 0 3px 6px $color-shadow-header;
+      background-color: $color-white;
+      top: 78px;
+      left: 0;
+
+      @include media-tablet-size{
+        display: flex;
+        top: 0;
+        left: 0;
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.toggle-menu{
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  .mobile-menu{
+    width: 20px;
+    height: 2px;
+    background-color: $color-hamburger-menu;
+    margin-bottom: 3px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-tablet-size{
+    display: none;
+  }
+}
+
+.nav-bar {
+  display: none;
+
+  @include media-tablet-size{
+    display: flex;
+    padding-left: 10px;
+  }
+}
+
+.nav-item {
+  padding: 0;
+  margin-bottom: 14px;
+
+  @include media-tablet-size{
+    margin-bottom: 0;
+  }
+
+  @include media-laptop-size-small{
+    padding: 0 20px;
+  }
+
+  @include media-laptop-size{
+    padding: 0 42px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.nav-link {
+  color: $color-grey;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 3.28px;
+  padding: 28px 12px 24px;
+  border-bottom: 4px transparent;
+
+  @include media-tablet-size{
+    letter-spacing: 0.7px;
+  }
+
+  @include media-laptop-size-small{
+    letter-spacing: 3.28px;
+  }
+
+  &:hover {
+    color: $color-black;
+
+    @include media-tablet-size{
+      border-bottom-color: $color-primary;
+      border-bottom-style: solid;
+      color: $color-black;
+    }
+  }
+}
+
