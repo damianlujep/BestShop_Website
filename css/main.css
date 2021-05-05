@@ -461,16 +461,61 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
-.mobile-menu {
+nav input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+nav input:checked + .toggle-menu .mobile-menu {
+  transition: 0.5s;
+}
+nav input:checked + .toggle-menu .mobile-menu:first-child {
+  transform: rotate(-45deg) translate(-3px, 5px);
+}
+nav input:checked + .toggle-menu .mobile-menu:nth-child(2) {
+  opacity: 0;
+}
+nav input:checked + .toggle-menu .mobile-menu:last-child {
+  transform: rotate(45deg) translate(-2px, -4px);
+}
+nav input:checked + .toggle-menu + .nav-bar {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 15px;
+  width: calc(100vw - 30px);
+  position: absolute;
+  margin-top: 30px;
+  top: 75px;
+  left: 13px;
+}
+@media (min-width: 481px) {
+  nav input:checked + .toggle-menu + .nav-bar {
+    top: 0;
+    left: 0;
+  }
+}
+
+.toggle-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.toggle-menu .mobile-menu {
   width: 20px;
   height: 2px;
   background-color: #07ACE6;
-  margin: 3px 0;
+  margin-bottom: 3px;
+}
+.toggle-menu .mobile-menu:last-child {
+  margin-bottom: 0;
 }
 @media (min-width: 481px) {
-  .mobile-menu {
+  .toggle-menu {
     display: none;
   }
 }
@@ -487,6 +532,12 @@ header {
 
 .nav-item {
   padding: 0;
+  margin-bottom: 14px;
+}
+@media (min-width: 481px) {
+  .nav-item {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 769px) {
   .nav-item {
@@ -503,6 +554,7 @@ header {
 }
 .nav-item:last-child {
   padding-right: 0;
+  margin-bottom: 0;
 }
 
 .nav-link {
@@ -513,6 +565,7 @@ header {
   text-align: center;
   font-weight: 700;
   line-height: 15px;
+  letter-spacing: 3.28px;
   padding: 28px 12px 24px;
   border-bottom: 4px transparent;
 }
@@ -527,9 +580,14 @@ header {
   }
 }
 .nav-link:hover {
-  border-bottom-color: #08A6E4;
-  border-bottom-style: solid;
   color: #000000;
+}
+@media (min-width: 481px) {
+  .nav-link:hover {
+    border-bottom-color: #08A6E4;
+    border-bottom-style: solid;
+    color: #000000;
+  }
 }
 
 .welcome-section {
