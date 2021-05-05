@@ -40,15 +40,23 @@ nav input{
       display: inline-block;
       font-size: 11px;
       line-height: 15px;
-      width: calc(100vw - 30px);
+      width: 100%;
       position: absolute;
-      margin-top: 30px;
-      top: 75px;
-      left: 13px;
+      padding-top: 30px;
+      padding-bottom: 34px;
+      box-shadow: 0 3px 6px $color-shadow-header;
+      background-color: $color-white;
+      top: 78px;
+      left: 0;
 
       @include media-tablet-size{
+        display: flex;
         top: 0;
         left: 0;
+        position: relative;
+        padding-top: 0;
+        padding-bottom: 0;
+        box-shadow: none;
       }
     }
   }
